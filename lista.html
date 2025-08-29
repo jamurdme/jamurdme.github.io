@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamurdme ⭑ Lista de Brainrots</title>
+    <link rel="icon" type="image/png" href="https://i.imgur.com/JeosTRH.png">
+    <meta property="og:title" content="Jamurdme ⭑ Lista de Brainrots">
+    <meta property="og:description" content="Descubre la lista de valores de los brainrots de Steal A Brainrot con sus precios en Robux.">
+    <meta property="og:image" content="https://i.imgur.com/0DgUzRI.png">
+    <meta property="og:url" content="https://jamurdme.com/lista.html">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #a0a2a1;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar {
+            background: #0a0a0a;
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        .navbar-brand img {
+            height: 32px;
+            width: 32px;
+            margin-right: 12px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nav-link {
+            color: #a0a2a1;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0);
+        }
+        .nav-link:hover {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .discord-btn {
+            background: #5865F2;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .discord-btn:hover {
+            background: #4a54d5;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        h2 {
+            margin-bottom: 2rem;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            white-space: nowrap;
+        }
+        .search-bar {
+            margin-bottom: 2rem;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            outline: none;
+        }
+        .search-bar input::placeholder {
+            color: #a0a2a1;
+        }
+        .search-bar input:focus {
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .search-bar .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #a0a2a1;
+            font-size: 1.1rem;
+        }
+        .item-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .item-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .item-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .item-card img {
+            width: 90px;
+            height: 90px;
+            border-radius: 12px; /* Bordes redondeados */
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+        .item-card .divider {
+            width: 80%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+            margin: 1rem 0;
+        }
+        .item-card h3 {
+            color: #ffffff;
+            font-size: 1.25rem; /* Tamaño de fuente más pequeño */
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            min-height: 2.5em; /* Asegura un espacio mínimo para nombres largos */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .item-card .value {
+            font-size: 1.1rem;
+            color: #fff;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.75rem;
+        }
+        .item-card .value img {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 0;
+            box-shadow: none;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 123, 255, 0.2);
+            color: #8ac0ff;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 8px rgba(0, 123, 255, 0.1);
+            border: 1px solid rgba(0, 123, 255, 0.3);
+        }
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.8rem;
+            color: #4a4a4a;
+            margin-top: auto;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 1.5rem;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .nav-links {
+                gap: 10px;
+            }
+            .item-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <img src="https://i.imgur.com/JeosTRH.png" alt="Jamurdme Logo">
+            Jamurdme
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="lista.html" class="nav-link">Valores</a>
+            <a href="calculadora.html" class="nav-link">Calculadora</a>
+            <a href="https://discord.gg/62rt9w3V9V" class="discord-btn" target="_blank">Únete al Discord</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Lista de Valores de Brainrots</h2>
+        
+        <center>
+            <div class="search-bar">
+                <span class="search-icon">&#128269;</span> <input type="text" id="searchInput" onkeyup="filterItems()" placeholder="Buscar Brainrot...">
+            </div>
+        </center>
+
+        <div class="item-grid" id="itemGrid">
+            <div class="item-card">
+                <img src="https://i.imgur.com/BzZr0GL.png" alt="Imagen de La Vacca Saturno Saturnita">
+                <div class="divider"></div>
+                <h3 data-name="La Vacca Saturno Saturnita">La Vacca Saturno Saturnita</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 250</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/bdAftFL.png" alt="Imagen de Bisonte Giuppitere">
+                <div class="divider"></div>
+                <h3 data-name="Bisonte Giuppitere">Bisonte Giuppitere</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 270</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/YWquJGF.png" alt="Imagen de Karkerkar Kurkur">
+                <div class="divider"></div>
+                <h3 data-name="Karkerkar Kurkur">Karkerkar Kurkur</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 285</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/Bh9tIGk.png" alt="Imagen de Torrtuginni Dragonfrutini">
+                <div class="divider"></div>
+                <h3 data-name="Torrtuginni Dragonfrutini">Torrtuginni Dragonfrutini</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 700</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/Wk8Df9y.png" alt="Imagen de Los Matteos">
+                <div class="divider"></div>
+                <h3 data-name="Los Matteos">Los Matteos</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 590</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/o5Kz6Kk.png" alt="Imagen de Sammyni Spyderini">
+                <div class="divider"></div>
+                <h3 data-name="Sammyni Spyderini">Sammyni Spyderini</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 400</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/my5U2nI.png" alt="Imagen de Dul Dul Dul">
+                <div class="divider"></div>
+                <h3 data-name="Dul Dul Dul">Dul Dul Dul</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 435</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/rGOxt2K.png" alt="Imagen de Blackhole Goat">
+                <div class="divider"></div>
+                <h3 data-name="Blackhole Goat">Blackhole Goat</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 420</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/9mE7Y34.png" alt="Imagen de Los Spyderinis">
+                <div class="divider"></div>
+                <h3 data-name="Los Spyderinis">Los Spyderinis</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 410</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/AxQNPGl.png" alt="Imagen de Los Tralaleritos">
+                <div class="divider"></div>
+                <h3 data-name="Los Tralaleritos">Los Tralaleritos</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 350</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/Un7WYpO.png" alt="Imagen de Las Tralaleritas">
+                <div class="divider"></div>
+                <h3 data-name="Las Tralaleritas">Las Tralaleritas</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 450</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/hxFaQya.png" alt="Imagen de Job Job Job Sahur">
+                <div class="divider"></div>
+                <h3 data-name="Job Job Job Sahur">Job Job Job Sahur</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1000</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/BTUaeXT.png" alt="Imagen de Las Vaquitas Saturnitas">
+                <div class="divider"></div>
+                <h3 data-name="Las Vaquitas Saturnitas">Las Vaquitas Saturnitas</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 800</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/aQPXdYE.png" alt="Imagen de Graipuss Medussi">
+                <div class="divider"></div>
+                <h3 data-name="Graipuss Medussi">Graipuss Medussi</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1050</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/0rstFFW.png" alt="Imagen de Nooo My Hotspot">
+                <div class="divider"></div>
+                <h3 data-name="Nooo My Hotspot">Nooo My Hotspot</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 910</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/vHgDfME.png" alt="Imagen de Pot Hotspot">
+                <div class="divider"></div>
+                <h3 data-name="Pot Hotspot">Pot Hotspot</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1200</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/ScaqSM5.png" alt="Imagen de Chicleteira Bicicleteira">
+                <div class="divider"></div>
+                <h3 data-name="Chicleteira Bicicleteira">Chicleteira Bicicleteira</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1500</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/qSAElNe.png" alt="Imagen de La Grande Combinasion">
+                <div class="divider"></div>
+                <h3 data-name="La Grande Combinasion">La Grande Combinasion</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 2300</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/YzHSNFG.png" alt="Imagen de Los Combinasionas">
+                <div class="divider"></div>
+                <h3 data-name="Los Combinasionas">Los Combinasionas</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 2100</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/8t5vZZN.png" alt="Imagen de Nuclearo Dinossauro">
+                <div class="divider"></div>
+                <h3 data-name="Nuclearo Dinossauro">Nuclearo Dinossauro</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1900</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/gVpyPfy.png" alt="Imagen de Los Hotspotsitos">
+                <div class="divider"></div>
+                <h3 data-name="Los Hotspotsitos">Los Hotspotsitos</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1000</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/Py1466d.png" alt="Imagen de Esok Sekolah">
+                <div class="divider"></div>
+                <h3 data-name="Esok Sekolah">Esok Sekolah</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1000</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/cOtlkIC.png" alt="Imagen de Ketupat Kepat">
+                <div class="divider"></div>
+                <h3 data-name="Ketupat Kepat">Ketupat Kepat</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1000</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/I3Too2R.png" alt="Imagen de La Supreme Combinasion">
+                <div class="divider"></div>
+                <h3 data-name="La Supreme Combinasion">La Supreme Combinasion</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1000</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/pOoqhk4.png" alt="Imagen de Garama and Madundung">
+                <div class="divider"></div>
+                <h3 data-name="Garama and Madundung">Garama and Madundung</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 1700</p>
+                <div class="badge">SECRETO</div>
+            </div>
+            <div class="item-card">
+                <img src="https://i.imgur.com/IoKtpSo.png" alt="Imagen de Dragon Cannelloni">
+                <div class="divider"></div>
+                <h3 data-name="Dragon Cannelloni">Dragon Cannelloni</h3>
+                <p class="value"><img src="https://i.imgur.com/JFTAVlF.png" alt="Robux Icon"> 2700</p>
+                <div class="badge">SECRETO</div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        Jamurdme ⭑ Community
+    </footer>
+
+    <script>
+        function filterItems() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const itemGrid = document.getElementById('itemGrid');
+            const items = itemGrid.getElementsByClassName('item-card');
+
+            for (let i = 0; i < items.length; i++) {
+                const h3 = items[i].getElementsByTagName('h3')[0];
+                const name = h3.getAttribute('data-name');
+                if (name.toLowerCase().includes(filter)) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
